@@ -4,7 +4,7 @@ import string
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
-# Download required resources
+# Download required NLTK resources
 nltk.download('punkt')
 nltk.download('stopwords')
 
@@ -23,7 +23,7 @@ def preprocess_text(text):
     # Tokenize
     tokens = word_tokenize(text)
 
-    # Remove stopwords, punctuation, and non-alphabetic words
+    # Remove stopwords, punctuation, non-alphabetic words
     filtered_tokens = []
 
     for word in tokens:
@@ -35,8 +35,7 @@ def preprocess_text(text):
         ):
             filtered_tokens.append(word)
 
-    # If everything gets removed,
-    # return original lowercase text instead
+    # Prevent empty processed text
     if len(filtered_tokens) == 0:
         return text
 
