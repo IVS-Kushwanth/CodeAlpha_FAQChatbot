@@ -1,15 +1,11 @@
-import nltk
 import string
 
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-
-# Download required NLTK resources
-nltk.download('punkt')
-nltk.download('stopwords')
-
-# Load stopwords once
-stop_words = set(stopwords.words('english'))
+# Simple stopword list
+stop_words = {
+    "is", "am", "are", "the", "a", "an",
+    "what", "how", "do", "does", "can",
+    "i", "you", "to", "of", "and", "in"
+}
 
 def preprocess_text(text):
 
@@ -17,26 +13,25 @@ def preprocess_text(text):
     if text is None:
         return ""
 
-    # Convert to lowercase
+    # Lowercase
     text = str(text).lower().strip()
 
-    # Tokenize
-    tokens = word_tokenize(text)
+    # Remove punctuation
+    text = text.translate(
+        str.maketrans('', '', string.punctuation)
+    )
 
-    # Remove stopwords, punctuation, non-alphabetic words
-    filtered_tokens = []
+    # Split into words
+    words = text.split()
 
-    for word in tokens:
+    # Remove stopwords
+    filtered_words = [
+        word for word in words
+        if word not in stop_words
+    ]
 
-        if (
-            word not in stop_words
-            and word not in string.punctuation
-            and word.isalpha()
-        ):
-            filtered_tokens.append(word)
-
-    # Prevent empty processed text
-    if len(filtered_tokens) == 0:
+    # Prevent empty string
+    if len(filtered_words) == 0:
         return text
 
-    return " ".join(filtered_tokens)
+    return " ".join(filtered_words)
