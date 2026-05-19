@@ -1,0 +1,20 @@
+question,answer
+"What is CodeAlpha?","CodeAlpha is an educational initiative that provides beginner-friendly coding projects and learning resources."
+"Tell me about CodeAlpha","CodeAlpha is an educational initiative that provides beginner-friendly coding projects and learning resources."
+"Explain CodeAlpha","CodeAlpha is an educational initiative that provides beginner-friendly coding projects and learning resources."
+"What does CodeAlpha do?","CodeAlpha is an educational initiative that provides beginner-friendly coding projects and learning resources."
+
+"How do I use this chatbot?","Run the Streamlit app using: streamlit run app.py and then type your question."
+"How to use chatbot?","Run the Streamlit app using: streamlit run app.py and then type your question."
+"How can I start the chatbot?","Run the Streamlit app using: streamlit run app.py and then type your question."
+"How do I run the chatbot?","Run the Streamlit app using: streamlit run app.py and then type your question."
+
+"How does the chatbot work?","The chatbot preprocesses text and uses TF-IDF with cosine similarity to find the most relevant FAQ."
+"How does chatbot find answers?","The chatbot preprocesses text and uses TF-IDF with cosine similarity to find the most relevant FAQ."
+"Explain chatbot working","The chatbot preprocesses text and uses TF-IDF with cosine similarity to find the most relevant FAQ."
+"What algorithm does the chatbot use?","The chatbot preprocesses text and uses TF-IDF with cosine similarity to find the most relevant FAQ."
+
+"Can I add my own FAQs?","Yes. Open data/faq.csv and add more question-answer rows."
+"How can I add FAQs?","Yes. Open data/faq.csv and add more question-answer rows."
+"Can I customize the chatbot?","Yes. Open data/faq.csv and add more question-answer rows."
+"Can I train the chatbot with new data?","Yes. Open data/faq.csv and add more question-answer rows."
